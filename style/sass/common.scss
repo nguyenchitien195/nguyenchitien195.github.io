@@ -1,0 +1,12 @@
+@mixin mixin-background ($url, $size) {
+    background: url($url) no-repeat;
+    background-size: $size;
+}
+
+.right-content>div>div {
+    height: 1000px;
+    text-align: center;
+    span {
+        font-family: iCiel-Altus;
+    }
+}

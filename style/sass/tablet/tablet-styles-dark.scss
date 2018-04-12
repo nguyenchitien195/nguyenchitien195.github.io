@@ -1,0 +1,59 @@
+@import '../reset.scss';
+@import '../variables.scss';
+@import '../common.scss';
+
+$tablet: "(min-width: 600px)";
+$portrait: "(orientation:portrait)";
+$landscape: "(orientation:landscape)";
+
+.right-content {
+    color: $r-color;
+    width: 80%;
+    float: right;
+}
+
+li:hover {
+    background: #0d0d0d;
+    a {
+        span {
+            color: #fff;
+        }
+    }
+    cursor: pointer;
+}
+
+li.active {
+    background: #0d0d0d;
+    a {
+        span {
+            color: #fff;
+        }
+    }
+}
+
+@media only screen and #{$tablet} {
+    .left-menu {
+        width: 20% !important;
+        display: block !important;
+    }
+    .header-menu {
+        display: none !important;
+    }
+}
+
+
+// #danhmuc1 {
+// 	.mixin-background ('../../images/background-1.jpg');
+// }
+// #danhmuc2 {
+// 	.mixin-background ('../../images/background-2.jpg');
+// }
+// #danhmuc3 {
+// 	.mixin-background ('../../images/background-3.jpg');
+// }
+// #danhmuc4 {
+// 	.mixin-background ('../../images/background-4.jpg');
+// }
+// #danhmuc5 {
+// 	.mixin-background ('../../images/background-5.jpg');
+// }

@@ -1,0 +1,74 @@
+// @import '../reset.less';
+// @import '../variables.less';
+// @import '../common.less';
+
+$background-light: #fff;
+.left-menu{
+    background: #F0F1EE;
+    li{
+        a{
+            span{
+                color: #787878;
+                background: #F0F1EE;
+            }
+        }
+        border-bottom-color: #1c1c1c;
+        border-bottom-width: 1px;
+        border-bottom-style: solid; 
+    }
+    li:first-child{
+        border-top-color: #1c1c1c;
+        border-top-width: 1px;
+        border-top-style: solid;
+    }
+    li:hover{ 
+        background: $background-light;
+        a{
+            span{
+                color: #000;
+                background: $background-light;
+            }
+        }
+        cursor: pointer;
+    }
+    li.active{
+        background: $background-light;
+        a{
+            span{
+                color: #000;
+                background: $background-light;
+            }
+        }
+    }
+}
+
+.spinner{
+    background: #000 !important;
+}
+.right-content{
+    color: #000 !important;
+}
+
+
+#introduction{
+    z-index: -1;
+    background: $background-light;
+}
+#story{
+    background: $background-light;
+}
+#blog{
+    background: $background-light;
+}
+#products{
+    background: $background-light;
+}
+#albums{
+    background: $background-light;
+}
+#cv{
+    background: $background-light;
+}
+#contact{
+    background: $background-light;
+}

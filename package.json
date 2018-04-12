@@ -1,0 +1,26 @@
+{
+  "name": "handler-frond-end",
+  "version": "1.0.0",
+  "description": "minify css, js, compile sass, less",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss-mobile": "node-sass -w style/sass/mobile -o css/mobile",
+    "scss-tablet": "node-sass -w style/sass/tablet -o css/tablet",
+    "scss-desktop": "node-sass -w style/sass/desktop -o css/desktop",
+    "scss": "concurrently \"npm run scss-mobile\" \"npm run scss-tablet\" \"npm run scss-desktop\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguyenchitien195/nguyenchitien195.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nguyenchitien195/nguyenchitien195.github.io/issues"
+  },
+  "homepage": "https://github.com/nguyenchitien195/nguyenchitien195.github.io#readme",
+  "dependencies": {
+    "node-sass": "^4.8.3"
+  }
+}
