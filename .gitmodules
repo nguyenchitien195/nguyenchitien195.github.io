@@ -1,3 +1,6 @@
 [submodule "slack-manager"]
 	path = slack-manager
 	url = https://github.com/nguyenchitien195/slack-manager.git
+[submodule "slack-manager-v2"]
+	path = slack-manager-v2
+	url = https://github.com/nguyenchitien195/slack-manager-v2.git
