@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/blogs.js"],"names":["Blogs"],"mappings":"2FAAA,wEAEe,SAASA,IACtB,OACE,6BACE","file":"component---src-pages-blogs-js-20cf842e2db2495386dd.js","sourcesContent":["import React from 'react';\n\nexport default function Blogs() {\n  return (\n    <div>\n      <span>Hello</span>\n    </div>\n  )\n}"],"sourceRoot":""}

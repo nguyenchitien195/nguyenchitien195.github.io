@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/portfolios.js"],"names":["Portfolios"],"mappings":"6FAAA,wEAEe,SAASA,IACtB,OACE,6BACE","file":"component---src-pages-portfolios-js-24d61b6f6d1ac3bfb620.js","sourcesContent":["import React from 'react';\n\nexport default function Portfolios() {\n  return (\n    <div>\n      <span>Hello</span>\n    </div>\n  )\n}"],"sourceRoot":""}
