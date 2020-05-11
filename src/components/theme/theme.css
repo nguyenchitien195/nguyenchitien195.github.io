@@ -1,0 +1,17 @@
+/* Default theme is Light mode */
+
+:root {
+  --main-bg: #FFF;
+  --main-color: #000;
+  --sub-bg: #1A1A1A;
+  --left-menu-bg: #f0f1ee;
+  --left-menu-color: #000;
+}
+
+body.dark, .main.dark {
+  --main-bg: black;
+  --main-color: #fff;
+  --sub-bg: #1A1A1A;
+  --left-menu-bg: #121212;
+  --left-menu-color: #fff;
+}

@@ -1,0 +1,20 @@
+.tl-edges {
+  overflow: hidden;
+}
+
+.right-content {
+  min-height: 100vh;
+  padding: 50px;
+  color: var(--main-color);
+  background-color: var(--main-bg);
+}
+
+.right-content img {
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .right-content {
+    margin-left: 20%;
+  }
+}

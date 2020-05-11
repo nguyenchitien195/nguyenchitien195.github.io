@@ -1,0 +1,12 @@
+{
+  "home": "Home",
+  "about": "About",
+  "resume": "Resume",
+  "portfolios": "Portfolios",
+  "blogs": "Blogs",
+  "contact": "Contact",
+  "home-content": {
+    "hi": "Hi",
+    "i-am": "I am Tien"
+  }
+}

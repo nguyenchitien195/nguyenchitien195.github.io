@@ -1,0 +1,68 @@
+.spinner-master {
+    height: 26px;
+    width: 38px;
+    right: 10px;
+    top: 10px;
+    position: fixed;
+    cursor: pointer;
+}
+
+.spinner-master * {
+    -webkit-transition: all 0.3s;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+.spinner-master input[type=checkbox] {
+    display: none;
+}
+
+.spinner-master input[type=checkbox]:checked~.spinner-spin>.horizontal {
+    opacity: 0;
+}
+
+.spinner-master input[type=checkbox]:checked~.spinner-spin>.diagonal.part-1 {
+    -webkit-transform: rotate(405deg);
+    margin-top: 10px;
+    transform: rotate(405deg);
+}
+
+.spinner-master input[type=checkbox]:checked~.spinner-spin>.diagonal.part-2 {
+    -webkit-transform: rotate(-405deg);
+    margin-top: -16px;
+    transform: rotate(-405deg);
+}
+
+.spinner-master label {
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    z-index: 99;
+}
+
+.spinner-master .spinner {
+    background-color: #a94442;
+    height: 5px;
+    position: absolute;
+    width: 100%;
+}
+
+.spinner-master .diagonal.part-1 {
+    float: left;
+    position: relative;
+}
+
+.spinner-master .horizontal {
+    float: left;
+    margin-top: 6px;
+    position: relative;
+}
+
+.spinner-master .diagonal.part-2 {
+    float: left;
+    margin-top: 6px;
+    position: relative;
+}
