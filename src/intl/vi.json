@@ -1,12 +1,20 @@
 {
   "home": "Trang chính",
+  "home-content": {
+    "hi": "Xin chào",
+    "i-am": "Tôi là Tiến"
+  },
   "about": "Giới thiệu",
   "resume": "CV",
   "portfolios": "Sản phẩm",
   "blogs": "Blogs",
   "contact": "Liên hệ",
-  "home-content": {
-    "hi": "Xin chào",
-    "i-am": "Tôi là Tiến"
+  "contact-content": {
+    "name": "Tên",
+    "email": "Email",
+    "message": "Nội dung",
+    "phone": "Số điện thoại",
+    "cancel": "Hủy",
+    "send": "Gửi"
   }
 }

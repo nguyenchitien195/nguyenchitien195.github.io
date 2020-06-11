@@ -6,7 +6,7 @@ import { injectIntl } from "gatsby-plugin-intl";
 const About = () => {
   return (
     <Fragment>
-
+      <img src={"https://www.codewars.com/users/nguyenchitien195/badges/large"} />
     </Fragment>
   )
 }

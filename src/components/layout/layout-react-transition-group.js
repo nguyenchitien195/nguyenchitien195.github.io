@@ -12,14 +12,14 @@ const Layout = ({ children, location }) => {
   const [theme, setTheme] = useState('dark');
   const value = { theme, setTheme };
 
-  console.log('Layout react transition group render')
+  console.log('Layout react transition group render ', location)
 
   return (
     <Theme.Provider value={value}>
       <Theme.Consumer>
         {(theme) => (
           <div className={`main ${theme.theme}`}>
-            <Menu />
+            <Menu location={location} />
             <div className="right-content">
               <Transition location={location}>
                 {children}

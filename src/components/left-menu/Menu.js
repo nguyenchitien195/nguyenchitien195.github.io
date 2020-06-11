@@ -14,24 +14,28 @@ import './menu.css';
 import './menu-spinner.css';
 import './language-btn.css';
 
-import Theme from '../theme/ThemeContext';
-
-
-
 class Menu extends React.Component {
 
-
-  handleSetActive(to) {
-    console.log(to);
+  constructor(props) {
+    super(props);
+    this.state = {
+      theme: 'dark',
+    }
   }
 
-  setTheme(isLightMode, setThemeProvider) {
+  componentDidMount() {
+    var themeName = 'dark';
+    if (window.localStorage.getItem('theme-mode') === 'light') {
+      themeName = 'light';
+    }
+    this.setState({ theme: themeName });
+  }
+
+  setTheme(isLightMode) {
     const themeName = isLightMode ? 'light' : 'dark';
     window.localStorage.setItem('theme-mode', themeName);
-    var body = document.querySelector('body');
-    body.removeAttribute('class');
-    body.setAttribute('class', themeName);
-    setThemeProvider(themeName);
+    document.querySelector('body').setAttribute('class', themeName);
+    this.setState({ theme: themeName });
   }
 
   changeLanguage(lang) {
@@ -41,7 +45,9 @@ class Menu extends React.Component {
 
   render() {
 
-    const { intl } = this.props;
+    const { intl, location } = this.props;
+
+    console.log(this.props)
 
     console.log('menu render')
 
@@ -58,7 +64,6 @@ class Menu extends React.Component {
       </div>
       <div className="left-menu">
         <img alt="menu" src={Logo} alt="menu" />
-        <img src={"https://www.codewars.com/users/nguyenchitien195/badges/large"} />
         <div>
           <input id="toggle-on" className="toggle-lang toggle-left" name="toggle" value="vi" type="radio"
             checked={intl.locale === 'vi'} onChange={(e) => this.changeLanguage(e.target.value)} />
@@ -78,27 +83,27 @@ class Menu extends React.Component {
             </Link>
           </li>
           <li>
-            <Link to="/about">
+            <Link to="/about/">
               <span>{intl.formatMessage({ id: 'about' })}</span>
             </Link>
           </li>
           <li>
-            <Link to="/resume">
+            <Link to="/resume/">
               <span>{intl.formatMessage({ id: 'resume' })}</span>
             </Link>
           </li>
           <li>
-            <Link to="/portfolios">
+            <Link to="/portfolios/">
               <span>{intl.formatMessage({ id: 'portfolios' })}</span>
             </Link>
           </li>
-          <li>
-            <Link to="/blogs">
+          <li className={location.pathname.split("/")[1] === "blogs" ? "active" : ""}>
+            <Link to="/blogs/">
               <span>{intl.formatMessage({ id: 'blogs' })}</span>
             </Link>
           </li>
           <li>
-            <Link to="/contact">
+            <Link to="/contact/">
               <span>{intl.formatMessage({ id: 'contact' })}</span>
             </Link>
           </li>
@@ -120,15 +125,11 @@ class Menu extends React.Component {
             <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
           </a>
         </div>
-        <Theme.Consumer>
-          {({ theme, setTheme }) => (
 
-            <div className="toggle toggle--daynight">
-              <input type="checkbox" checked={theme === 'light'} id="toggle--daynight" className="toggle--checkbox" onChange={(e) => this.setTheme(e.target.checked, setTheme)} />
-              <label className="toggle--btn" htmlFor="toggle--daynight"><span className="toggle--feature"></span></label>
-            </div>
-          )}
-        </Theme.Consumer>
+        <div className="toggle toggle--daynight">
+          <input type="checkbox" checked={this.state.theme === 'light'} id="toggle--daynight" className="toggle--checkbox" onChange={(e) => this.setTheme(e.target.checked)} />
+          <label className="toggle--btn" htmlFor="toggle--daynight"><span className="toggle--feature"></span></label>
+        </div>
       </div>
     </Fragment>;
   }

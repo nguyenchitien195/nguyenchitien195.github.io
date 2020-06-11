@@ -1,16 +1,19 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
-import Tags from '../components/tags';
-// import Img from 'gatsby-image';
+import React from "react"
+import { Link, graphql } from "gatsby";
 import { Card, Icon, Label } from 'semantic-ui-react';
 
-export default function Blogs({ data }) {
-  console.log(data);
-  const Posts = data.posts.nodes;
+export default function Template({
+  data // this prop will be injected by the GraphQL query below.
+}) {
+  const { posts, sitePage } = data // data.markdownRemark holds your post data
+  console.log(posts, sitePage);
   return (
-    <div>
-    <h2>Chia sẻ để nhận về</h2>
-      {Posts.map((post, index) => {
+    <div className="blog-post-container">
+      <div>
+        <h2>Tag: <b>"{sitePage.context.tag}"</b></h2><br />
+        <span>{sitePage.context.totalCount} {sitePage.context.totalCount > 1 ? "posts" : "post"}</span>
+      </div>
+      {posts.nodes.map((post, index) => {
         return (
           <div key={index}>
             <Card fluid color='red'>
@@ -29,7 +32,7 @@ export default function Blogs({ data }) {
                 {post.frontmatter.tags.map((tag, index) => {
                   return (
                     <Link key={index} to={`/blogs/tags/${tag}`}>
-                      <Label tag color={"grey"}>
+                      <Label tag color={sitePage.context.tag === tag ? "blue" : "grey"}>
                         {tag}
                       </Label>
                     </Link>
@@ -45,15 +48,15 @@ export default function Blogs({ data }) {
   )
 }
 
-export const queryPage = graphql`
-  query blogQuery {
-    tags: allMarkdownRemark {
-      group(field: frontmatter___tags) {
-        tag: fieldValue
+export const pageQuery = graphql`
+  query($tag: String!) {
+    sitePage(context: {tag: {eq: $tag}}) {
+      context {
+        tag
         totalCount
       }
     },
-    posts: allMarkdownRemark {
+    posts: allMarkdownRemark(filter: {frontmatter: {tags: {in: [$tag]}}}) {
       nodes {
         frontmatter {
           title
@@ -64,5 +67,5 @@ export const queryPage = graphql`
         }
       }
     }
-  }  
-`;
+  }
+`

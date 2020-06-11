@@ -1,4 +1,4 @@
-/node_modules/
-/.history/
-/.cache/
-/public/
+node_modules/
+.history/
+.cache/
+public/

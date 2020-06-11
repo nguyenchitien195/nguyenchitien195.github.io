@@ -13,7 +13,7 @@ const Resume = (props) => {
     <div>
 
       {/* Timeline */}
-      <Grid centered>
+      <Grid>
         <Grid.Column mobile={16} tablet={14} computer={12}>
           <ul className="timeline">
             <li className="timeline-item">
@@ -81,24 +81,57 @@ const Resume = (props) => {
         <Grid.Column mobile={16} tablet={8} computer={6}>
           <div className="skill-bar">
             <div id="skill-html" className="skill-process">
-              <span className="skill-name">HTML</span>
+              <span className="skill-name">HTML/CSS</span>
               {/* <span className="skill-percent">100%</span> */}
             </div>
           </div>
         </Grid.Column>
         <Grid.Column mobile={16} tablet={8} computer={6}>
           <div className="skill-bar">
-            <div id="skill-css" className="skill-process">
-              <span className="skill-name ">CSS/CSS3</span>
-              {/* <span className="skill-percent ">70%</span> */}
+            <div id="skill-js" className="skill-process">
+              <span className="skill-name ">JS/Jquery</span>
             </div>
           </div>
         </Grid.Column>
         <Grid.Column mobile={16} tablet={8} computer={6}>
           <div className="skill-bar">
-            <div id="skill-jquery" className="skill-process">
-              <span className="skill-name ">jQuery</span>
-              {/* <span className="skill-percent ">40%</span> */}
+            <div id="skill-php" className="skill-process">
+              <span className="skill-name ">PHP</span>
+            </div>
+          </div>
+        </Grid.Column>
+        <Grid.Column mobile={16} tablet={8} computer={6}>
+          <div className="skill-bar">
+            <div id="skill-sql" className="skill-process">
+              <span className="skill-name ">SQL</span>
+            </div>
+          </div>
+        </Grid.Column>
+        <Grid.Column mobile={16} tablet={8} computer={6}>
+          <div className="skill-bar">
+            <div id="skill-react" className="skill-process">
+              <span className="skill-name ">React</span>
+            </div>
+          </div>
+        </Grid.Column>
+        <Grid.Column mobile={16} tablet={8} computer={6}>
+          <div className="skill-bar">
+            <div id="skill-node" className="skill-process">
+              <span className="skill-name ">Node</span>
+            </div>
+          </div>
+        </Grid.Column>
+        <Grid.Column mobile={16} tablet={8} computer={6}>
+          <div className="skill-bar">
+            <div id="skill-git" className="skill-process">
+              <span className="skill-name ">Git</span>
+            </div>
+          </div>
+        </Grid.Column>
+        <Grid.Column mobile={16} tablet={8} computer={6}>
+          <div className="skill-bar">
+            <div id="skill-docker" className="skill-process">
+              <span className="skill-name ">Docker</span>
             </div>
           </div>
         </Grid.Column>

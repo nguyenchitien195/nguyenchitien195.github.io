@@ -1,12 +1,20 @@
 {
   "home": "Home",
+  "home-content": {
+    "hi": "Hi",
+    "i-am": "I am Tien"
+  },
   "about": "About",
   "resume": "Resume",
   "portfolios": "Portfolios",
   "blogs": "Blogs",
   "contact": "Contact",
-  "home-content": {
-    "hi": "Hi",
-    "i-am": "I am Tien"
+  "contact-content": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "phone": "Phone",
+    "cancel": "Cancel",
+    "send": "Send"
   }
 }
