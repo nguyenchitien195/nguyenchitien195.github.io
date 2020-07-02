@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby";
-import { Card, Icon, Label } from 'semantic-ui-react';
+import { Card, Icon, Label, Button } from 'semantic-ui-react';
 
 export default function Template({
   data // this prop will be injected by the GraphQL query below.
@@ -10,6 +10,9 @@ export default function Template({
   return (
     <div className="blog-post-container">
       <div>
+        <Link to={'/blogs/'}>
+          <Button content='All posts' icon='left arrow' labelPosition='left' />
+        </Link>
         <h2>Tag: <b>"{sitePage.context.tag}"</b></h2><br />
         <span>{sitePage.context.totalCount} {sitePage.context.totalCount > 1 ? "posts" : "post"}</span>
       </div>
@@ -40,7 +43,7 @@ export default function Template({
                 })}
               </Card.Content>
             </Card>
-            <br/>
+            <br />
           </div>
         )
       })}

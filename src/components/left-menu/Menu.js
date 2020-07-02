@@ -43,6 +43,14 @@ class Menu extends React.Component {
     changeLocale(lang);
   }
 
+  switchMenu(e) {
+    if (e.target.checked) {
+      document.getElementById('menu').style.display = "block";
+    } else {
+      document.getElementById('menu').style.display = "none";
+    }
+  }
+
   render() {
 
     const { intl, location } = this.props;
@@ -54,7 +62,7 @@ class Menu extends React.Component {
     return <Fragment>
       <div className="header-menu">
         <div id="spin-menu" className="spinner-master">
-          <input type="checkbox" id="spinner-form" />
+          <input type="checkbox" id="spinner-form" onClick={(e) => this.switchMenu(e)} />
           <label htmlFor="spinner-form" className="spinner-spin">
             <div className="spinner diagonal part-1"></div>
             <div className="spinner horizontal"></div>
@@ -62,7 +70,7 @@ class Menu extends React.Component {
           </label>
         </div>
       </div>
-      <div className="left-menu">
+      <div id="menu" className="left-menu" style={{ display: this.state.openMenu }}>
         <img alt="menu" src={Logo} alt="menu" />
         <div>
           <input id="toggle-on" className="toggle-lang toggle-left" name="toggle" value="vi" type="radio"
@@ -115,9 +123,9 @@ class Menu extends React.Component {
           <a href="//fb.com/hatcatvidai" target="_blank" rel="noopener" className="social-button facebook">
             <FontAwesomeIcon icon={faFacebookF} size="2x" />
           </a>
-          <a href="#" className="social-button twitter">
+          {/* <a href="#" className="social-button twitter">
             <FontAwesomeIcon icon={faTwitter} size="2x" />
-          </a>
+          </a> */}
           <a href="skype:live:nguyenchitien195?chat" className="social-button skype">
             <FontAwesomeIcon icon={faSkype} size="2x" />
           </a>

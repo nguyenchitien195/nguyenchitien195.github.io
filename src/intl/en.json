@@ -2,9 +2,16 @@
   "home": "Home",
   "home-content": {
     "hi": "Hi",
-    "i-am": "I am Tien"
+    "i-am": "I'm",
+    "name": "Tien", 
+    "i-am-a": "I'm a",
+    "web-developer": "Web developer",
+    "freelancer": "Freelancer"
   },
   "about": "About",
+  "about-content": {
+    "a": ""
+  },
   "resume": "Resume",
   "portfolios": "Portfolios",
   "blogs": "Blogs",

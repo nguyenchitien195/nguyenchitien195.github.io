@@ -37,7 +37,7 @@ class Layout extends React.Component {
               // tension: 210,
               // friction: 20,
               // clamp: true,
-              duration: 500
+              duration: 300
             },
           }}
           usual={{
@@ -48,7 +48,7 @@ class Layout extends React.Component {
             opacity: 0,
             transform: "translateX(100%)",
             config: {
-              duration: 500
+              duration: 300
             }
           }}
         >

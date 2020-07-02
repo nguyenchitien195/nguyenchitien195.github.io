@@ -1,6 +1,7 @@
 const projects = [
   {
     'title': 'nguyenchitien195.github.io',
+    'url': 'https://nguyenchitien195.github.io/',
     'desc': 'Portfolio, CV and personal blog',
     'img': '../../nguyenchitien195.github.io_resume.png',
     'tags': ['gatsby', 'react'],

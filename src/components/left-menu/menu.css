@@ -50,8 +50,8 @@
 }
 
 .left-menu li:hover a span {
-  background: var(--main-color);
-  color: var(--main-bg);
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
 }
 
 .left-menu li a[aria-current] span {
@@ -63,7 +63,6 @@
   background: var(--main-color);
   color: var(--main-bg);
 }
-
 
 .left-menu img {
   width: 100%;

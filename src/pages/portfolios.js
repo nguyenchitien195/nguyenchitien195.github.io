@@ -3,6 +3,7 @@ import StackGrid, { transitions } from "react-stack-grid";
 import { Card, Icon, Image, Label, Segment } from 'semantic-ui-react';
 
 import PROJECTS from './project-data';
+import { Link } from 'gatsby';
 
 const { helix } = transitions;
 
@@ -101,7 +102,9 @@ class Portfolios extends React.Component {
               <Card key={index} style={{ height: '380px' }}>
                 <Image src={project.img} />
                 <Card.Content style={{ display: 'grid' }}>
-                  <Card.Header>{project.title}</Card.Header>
+                  <Card.Header>
+                    {project.url ? <a href={project.url}>{project.title}</a> : project.title}
+                  </Card.Header>
                   <Card.Description>
                     {project.desc}
                   </Card.Description>

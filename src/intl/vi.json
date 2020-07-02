@@ -2,7 +2,11 @@
   "home": "Trang chính",
   "home-content": {
     "hi": "Xin chào",
-    "i-am": "Tôi là Tiến"
+    "i-am": "Mình là",
+    "name": "Tiến",
+    "i-am-a": "Mình là một",
+    "web-developer": "Web developer",
+    "freelancer": "Freelancer"
   },
   "about": "Giới thiệu",
   "resume": "CV",

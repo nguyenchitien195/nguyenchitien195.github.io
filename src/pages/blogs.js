@@ -9,7 +9,6 @@ export default function Blogs({ data }) {
   const Posts = data.posts.nodes;
   return (
     <div>
-    <h2>Chia sẻ để nhận về</h2>
       {Posts.map((post, index) => {
         return (
           <div key={index}>
