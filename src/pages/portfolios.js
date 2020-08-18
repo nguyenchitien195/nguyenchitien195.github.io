@@ -103,7 +103,7 @@ class Portfolios extends React.Component {
                 <Image src={project.img} />
                 <Card.Content style={{ display: 'grid' }}>
                   <Card.Header>
-                    {project.url ? <a href={project.url}>{project.title}</a> : project.title}
+                    {project.url ? <a target="_blank" href={project.url}>{project.title}</a> : project.title}
                   </Card.Header>
                   <Card.Description>
                     {project.desc}
@@ -115,7 +115,8 @@ class Portfolios extends React.Component {
                       <Label as="a" tag
                         color={this.state.tags.includes(tag) ? "blue" : "gray"}
                         key={tagIndex}
-                        onClick={() => this.addTag(tag)}>{tag}</Label>
+                        onClick={() => this.addTag(tag)}>{tag}
+                      </Label>
                     );
                   })}
                 </Card.Content>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Flag, Label, Button } from 'semantic-ui-react';
+import { Link } from 'gatsby';
 
 import { injectIntl } from 'gatsby-plugin-intl';
 
@@ -11,6 +12,16 @@ const Resume = (props) => {
 
   return (
     <div>
+      <div style={{ marginBottom: '20px' }}>
+        <span>Download CV</span><br />
+        <a href={'/nguyenchitien195_en.pdf'} className={'ui button'} style={{ width: '225px' }} download>
+          <Flag name="us" />&nbsp;&nbsp;nguyenchitien195_en.pdf
+        </a>
+        <br />
+        <a href={'/nguyenchitien195_en.pdf'} className={'ui button'} style={{ width: '225px' }} download>
+          <Flag name="vn" />&nbsp;&nbsp;nguyenchitien195_vi.pdf
+        </a>
+      </div>
 
       {/* Timeline */}
       <Grid>
