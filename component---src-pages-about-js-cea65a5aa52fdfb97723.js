@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{"3XHS":function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),c=t.n(a),r=t("kCIJ");n.default=Object(r.injectIntl)((function(){return c.a.createElement(a.Fragment,null,c.a.createElement("p",null),c.a.createElement("img",{src:"https://www.codewars.com/users/nguyenchitien195/badges/large"}))}))}}]);
-//# sourceMappingURL=component---src-pages-about-js-cea65a5aa52fdfb97723.js.map
