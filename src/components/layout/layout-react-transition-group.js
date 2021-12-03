@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Menu from "../left-menu/Menu";
+import React, { useState } from 'react';
+import Menu from '../left-menu/Menu';
 
 // import '../right-content/right-content.css';
 import Transition from './transition';
@@ -12,7 +12,7 @@ const Layout = ({ children, location }) => {
   const [theme, setTheme] = useState('dark');
   const value = { theme, setTheme };
 
-  console.log('Layout react transition group render ', location)
+  console.log('Layout react transition group render ', location);
 
   return (
     <Theme.Provider value={value}>
@@ -29,7 +29,7 @@ const Layout = ({ children, location }) => {
         )}
       </Theme.Consumer>
     </Theme.Provider>
-  )
-}
+  );
+};
 
 export default Layout;

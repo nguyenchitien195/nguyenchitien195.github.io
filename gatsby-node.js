@@ -40,17 +40,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  // result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-  //   createPage({
-  //     path: '/blogs/' + node.frontmatter.slug,
-  //     component: blogPostTemplate,
-  //     context: {
-  //       slug: node.frontmatter.slug
-  //     }, // additional data can be passed via context
-  //   })
-  // })
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: '/blogs/' + node.frontmatter.slug,
+      component: blogPostTemplate,
+      context: {
+        slug: node.frontmatter.slug
+      }, // additional data can be passed via context
+    })
+  })
 
-  console.log(tagList.data.tags)
   tagList.data.tags.group.map((tag) => {
     createPage({
       path: `/blogs/tags/${tag.tag}`,

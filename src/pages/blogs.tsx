@@ -1,28 +1,27 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
-import Tags from '../components/tags';
+import React, { ReactElement } from "react";
+import { Link, graphql } from "gatsby";
+import Tags from "../components/tags";
 // import Img from 'gatsby-image';
-import { Card, Icon, Label } from 'semantic-ui-react';
+import { Card, Icon, Label } from "semantic-ui-react";
 
-export default function Blogs({ data }) {
-  console.log(data);
+const Blogs = ({ data }): ReactElement => {
   const Posts = data.posts.nodes;
   return (
     <div>
       {Posts.map((post, index) => {
         return (
           <div key={index}>
-            <Card fluid color='red'>
+            <Card fluid color="red">
               <Card.Content>
                 <Card.Header>
-                  <Link to={'/blogs/' + post.frontmatter.slug}>{post.frontmatter.title}</Link>
+                  <Link to={"/blogs/" + post.frontmatter.slug}>
+                    {post.frontmatter.title}
+                  </Link>
                 </Card.Header>
                 <Card.Meta>
-                  <span className='date'>{post.frontmatter.date}</span>
+                  <span className="date">{post.frontmatter.date}</span>
                 </Card.Meta>
-                <Card.Description>
-                  {post.frontmatter.desc}
-                </Card.Description>
+                <Card.Description>{post.frontmatter.desc}</Card.Description>
               </Card.Content>
               <Card.Content extra>
                 {post.frontmatter.tags.map((tag, index) => {
@@ -32,17 +31,17 @@ export default function Blogs({ data }) {
                         {tag}
                       </Label>
                     </Link>
-                  )
+                  );
                 })}
               </Card.Content>
             </Card>
-            <br/>
+            <br />
           </div>
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};
 
 export const queryPage = graphql`
   query blogQuery {
@@ -51,7 +50,7 @@ export const queryPage = graphql`
         tag: fieldValue
         totalCount
       }
-    },
+    }
     posts: allMarkdownRemark {
       nodes {
         frontmatter {
@@ -63,5 +62,7 @@ export const queryPage = graphql`
         }
       }
     }
-  }  
+  }
 `;
+
+export default Blogs;
